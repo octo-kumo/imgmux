@@ -1,0 +1,14 @@
+[package]
+name = "imgmux"
+version = "0.1.0"
+edition = "2021"
+description = "Multi-image container: append images + metadata past the end of an image"
+license = "MIT"
+
+[dependencies]
+blake3 = "1"
+memmap2 = "0.9"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
